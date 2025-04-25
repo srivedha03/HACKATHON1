@@ -92,7 +92,7 @@ const ReviewSection = () => {
                         size={14}
                         className={
                           star <= review.rating
-                            ? "fill-vistara-gold text-vistara-gold"
+                            ? "fill-Utkarsh-gold text-Utkarsh-gold"
                             : "text-muted"
                         }
                       />
@@ -142,12 +142,10 @@ const ReviewSection = () => {
                 <Star
                   key={star}
                   size={20}
-                  onClick={() =>
-                    setFormData({ ...formData, rating: star })
-                  }
+                  onClick={() => setFormData({ ...formData, rating: star })}
                   className={
                     star <= formData.rating
-                      ? "cursor-pointer fill-vistara-gold text-vistara-gold"
+                      ? "cursor-pointer fill-Utkarsh-gold text-Utkarsh-gold"
                       : "cursor-pointer text-muted"
                   }
                 />
@@ -164,9 +162,7 @@ const ReviewSection = () => {
             <Button
               className="w-full mt-2"
               onClick={handleAddReview}
-              disabled={
-                !formData.name || !formData.visit || !formData.comment
-              }
+              disabled={!formData.name || !formData.visit || !formData.comment}
             >
               Submit Review
             </Button>

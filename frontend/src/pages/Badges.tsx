@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { badges, userStats } from "@/data/badges";
 import Header from "@/components/layout/Header";
@@ -16,12 +15,15 @@ const Badges = () => {
   const filteredBadges = badges.filter((badge) => {
     if (categoryFilter === "all") return true;
     if (categoryFilter === "earned") return badge.isEarned;
-    if (categoryFilter === "progress") return !badge.isEarned && badge.progress! > 0;
+    if (categoryFilter === "progress")
+      return !badge.isEarned && badge.progress! > 0;
     return badge.category.toLowerCase() === categoryFilter.toLowerCase();
   });
 
-  const earnedBadges = badges.filter(badge => badge.isEarned);
-  const inProgressBadges = badges.filter(badge => !badge.isEarned && badge.progress! > 0);
+  const earnedBadges = badges.filter((badge) => badge.isEarned);
+  const inProgressBadges = badges.filter(
+    (badge) => !badge.isEarned && badge.progress! > 0
+  );
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -38,13 +40,18 @@ const Badges = () => {
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-2xl flex items-center">
-                  <Award className="text-vistara-gold mr-2" />
+                  <Award className="text-Utkarsh-gold mr-2" />
                   <span>{earnedBadges.length}</span>
-                  <span className="text-muted-foreground text-sm ml-2">/ {badges.length} Badges Earned</span>
+                  <span className="text-muted-foreground text-sm ml-2">
+                    / {badges.length} Badges Earned
+                  </span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <Progress value={(earnedBadges.length / badges.length) * 100} className="h-2 mb-2" />
+                <Progress
+                  value={(earnedBadges.length / badges.length) * 100}
+                  className="h-2 mb-2"
+                />
                 <p className="text-sm text-muted-foreground">
                   Keep exploring responsibly to earn more badges!
                 </p>
@@ -54,14 +61,16 @@ const Badges = () => {
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-2xl flex items-center">
-                  <TrendingUp className="text-vistara-maroon mr-2" />
+                  <TrendingUp className="text-Utkarsh-maroon mr-2" />
                   <span>{userStats.totalPoints}</span>
-                  <span className="text-muted-foreground text-sm ml-2">Sustainability Points</span>
+                  <span className="text-muted-foreground text-sm ml-2">
+                    Sustainability Points
+                  </span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center">
-                  <BarChart size={16} className="mr-2 text-vistara-maroon" />
+                  <BarChart size={16} className="mr-2 text-Utkarsh-maroon" />
                   <span className="text-sm">
                     Rank {userStats.rank} of {userStats.totalUsers} users
                   </span>
@@ -72,21 +81,27 @@ const Badges = () => {
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-2xl flex items-center">
-                  <Leaf className="text-vistara-olive mr-2" />
+                  <Leaf className="text-Utkarsh-olive mr-2" />
                   Environmental Impact
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-2 text-sm">
                   <div className="flex items-center">
-                    <div className="w-3 h-3 rounded-full bg-vistara-blue mr-2"></div>
+                    <div className="w-3 h-3 rounded-full bg-Utkarsh-blue mr-2"></div>
                     <span className="text-muted-foreground">Carbon Saved:</span>
-                    <span className="ml-1 font-medium">{userStats.carbonSaved} kg</span>
+                    <span className="ml-1 font-medium">
+                      {userStats.carbonSaved} kg
+                    </span>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-3 h-3 rounded-full bg-vistara-terracotta mr-2"></div>
-                    <span className="text-muted-foreground">Plastic Avoided:</span>
-                    <span className="ml-1 font-medium">{userStats.plasticAvoided} items</span>
+                    <div className="w-3 h-3 rounded-full bg-Utkarsh-terracotta mr-2"></div>
+                    <span className="text-muted-foreground">
+                      Plastic Avoided:
+                    </span>
+                    <span className="ml-1 font-medium">
+                      {userStats.plasticAvoided} items
+                    </span>
                   </div>
                 </div>
               </CardContent>
@@ -97,13 +112,27 @@ const Badges = () => {
             <Tabs defaultValue="all" onValueChange={setCategoryFilter}>
               <div className="overflow-x-auto scrollbar-hide -mx-4 px-4 mb-6">
                 <TabsList className="flex w-max gap-2 rounded-xl border bg-muted p-1">
-                  <TabsTrigger className="min-w-max" value="all">All Badges</TabsTrigger>
-                  <TabsTrigger className="min-w-max" value="earned">Earned</TabsTrigger>
-                  <TabsTrigger className="min-w-max" value="progress">In Progress</TabsTrigger>
-                  <TabsTrigger className="min-w-max" value="Sustainability">Sustainability</TabsTrigger>
-                  <TabsTrigger className="min-w-max" value="Engagement">Engagement</TabsTrigger>
-                  <TabsTrigger className="min-w-max" value="Community Support">Community</TabsTrigger>
-                  <TabsTrigger className="min-w-max" value="Conservation">Conservation</TabsTrigger>
+                  <TabsTrigger className="min-w-max" value="all">
+                    All Badges
+                  </TabsTrigger>
+                  <TabsTrigger className="min-w-max" value="earned">
+                    Earned
+                  </TabsTrigger>
+                  <TabsTrigger className="min-w-max" value="progress">
+                    In Progress
+                  </TabsTrigger>
+                  <TabsTrigger className="min-w-max" value="Sustainability">
+                    Sustainability
+                  </TabsTrigger>
+                  <TabsTrigger className="min-w-max" value="Engagement">
+                    Engagement
+                  </TabsTrigger>
+                  <TabsTrigger className="min-w-max" value="Community Support">
+                    Community
+                  </TabsTrigger>
+                  <TabsTrigger className="min-w-max" value="Conservation">
+                    Conservation
+                  </TabsTrigger>
                 </TabsList>
               </div>
 
@@ -126,7 +155,9 @@ const Badges = () => {
                   </div>
                 ) : (
                   <div className="text-center py-16 bg-card rounded-xl shadow-sm border">
-                    <h3 className="text-xl font-semibold mb-2">No badges found</h3>
+                    <h3 className="text-xl font-semibold mb-2">
+                      No badges found
+                    </h3>
                     <p className="text-muted-foreground">
                       No badges match the selected category or status.
                     </p>
@@ -134,10 +165,9 @@ const Badges = () => {
                 )}
               </TabsContent>
             </Tabs>
-
           </div>
 
-          <div className="mt-12 bg-gradient-to-br from-vistara-maroon to-vistara-terracotta text-white rounded-xl shadow-lg p-8">
+          <div className="mt-12 bg-gradient-to-br from-Utkarsh-maroon to-Utkarsh-terracotta text-white rounded-xl shadow-lg p-8">
             <div className="flex flex-col md:flex-row items-center">
               <div className="mb-6 md:mb-0 md:mr-8">
                 <Recycle size={48} className="mb-4" />
@@ -147,10 +177,12 @@ const Badges = () => {
                   Sustainable Travel Challenge
                 </h3>
                 <p className="mb-4 text-white/90">
-                  Join our monthly challenge to reduce your travel carbon footprint! Complete eco-friendly activities during your cultural explorations and earn exclusive badges and rewards.
+                  Join our monthly challenge to reduce your travel carbon
+                  footprint! Complete eco-friendly activities during your
+                  cultural explorations and earn exclusive badges and rewards.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="bg-white text-vistara-maroon px-6 py-2.5 rounded-full font-medium hover:bg-white/90 transition-colors">
+                  <button className="bg-white text-Utkarsh-maroon px-6 py-2.5 rounded-full font-medium hover:bg-white/90 transition-colors">
                     Join Challenge
                   </button>
                   <button className="bg-transparent border border-white/60 text-white px-6 py-2.5 rounded-full font-medium hover:bg-white/10 transition-colors">

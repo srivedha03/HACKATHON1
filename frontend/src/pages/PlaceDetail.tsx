@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { places } from "@/data/places";
@@ -8,8 +7,24 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Heart, MapPin, Star, Calendar, ArrowLeft, Camera, ChefHat, Hammer, MessageCircle } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
+  Heart,
+  MapPin,
+  Star,
+  Calendar,
+  ArrowLeft,
+  Camera,
+  ChefHat,
+  Hammer,
+  MessageCircle,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import ReviewSection from "./ReviewSection";
@@ -32,7 +47,8 @@ const PlaceDetail = () => {
           <div className="text-center py-16">
             <h2 className="heading-2 mb-4">Place Not Found</h2>
             <p className="text-muted-foreground mb-6">
-              The heritage place you're looking for doesn't exist or has been removed.
+              The heritage place you're looking for doesn't exist or has been
+              removed.
             </p>
             <Button asChild>
               <Link to="/explore">Explore Other Places</Link>
@@ -73,7 +89,10 @@ const PlaceDetail = () => {
               </div>
               <div className="flex flex-wrap items-center gap-4">
                 <div className="flex items-center text-white">
-                  <Star size={18} className="mr-1 fill-vistara-gold text-vistara-gold" />
+                  <Star
+                    size={18}
+                    className="mr-1 fill-Utkarsh-gold text-Utkarsh-gold"
+                  />
                   <span className="font-medium">{place.rating.toFixed(1)}</span>
                   <span className="ml-1 text-white/70">rating</span>
                 </div>
@@ -108,11 +127,13 @@ const PlaceDetail = () => {
             {/* Main Content */}
             <div className="flex-1">
               <div className="bg-card rounded-xl shadow-sm border p-6 md:p-8 mb-8">
-                <h2 className="text-2xl font-semibold mb-4">About {place.title}</h2>
+                <h2 className="text-2xl font-semibold mb-4">
+                  About {place.title}
+                </h2>
                 <p className="text-muted-foreground mb-6">
                   {place.fullDescription || place.description}
                 </p>
-                
+
                 {place.highlights && (
                   <div className="space-y-4">
                     <h3 className="text-xl font-semibold">Highlights</h3>
@@ -120,7 +141,9 @@ const PlaceDetail = () => {
                       {place.highlights.map((highlight, index) => (
                         <li key={index} className="flex items-start">
                           <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center mr-2 mt-0.5">
-                            <span className="text-primary text-xs font-medium">{index + 1}</span>
+                            <span className="text-primary text-xs font-medium">
+                              {index + 1}
+                            </span>
                           </div>
                           <span>{highlight}</span>
                         </li>
@@ -137,11 +160,14 @@ const PlaceDetail = () => {
                     <Camera size={20} className="mr-2 text-primary" />
                     <h2 className="text-2xl font-semibold">Gallery</h2>
                   </div>
-                  
+
                   <Carousel className="w-full">
                     <CarouselContent>
                       {place.gallery.map((image, index) => (
-                        <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                        <CarouselItem
+                          key={index}
+                          className="md:basis-1/2 lg:basis-1/3"
+                        >
                           <div className="p-1">
                             <Card>
                               <CardContent className="flex aspect-square items-center justify-center p-0">
@@ -167,13 +193,16 @@ const PlaceDetail = () => {
                 {place.food && place.food.length > 0 && (
                   <div className="bg-card rounded-xl shadow-sm border p-6">
                     <div className="flex items-center mb-4">
-                      <ChefHat size={20} className="mr-2 text-vistara-terracotta" />
+                      <ChefHat
+                        size={20}
+                        className="mr-2 text-Utkarsh-terracotta"
+                      />
                       <h2 className="text-xl font-semibold">Famous Food</h2>
                     </div>
                     <ul className="space-y-2">
                       {place.food.map((item, index) => (
                         <li key={index} className="flex items-center">
-                          <div className="h-2 w-2 rounded-full bg-vistara-terracotta mr-2"></div>
+                          <div className="h-2 w-2 rounded-full bg-Utkarsh-terracotta mr-2"></div>
                           <span>{item}</span>
                         </li>
                       ))}
@@ -184,13 +213,13 @@ const PlaceDetail = () => {
                 {place.crafts && place.crafts.length > 0 && (
                   <div className="bg-card rounded-xl shadow-sm border p-6">
                     <div className="flex items-center mb-4">
-                      <Hammer size={20} className="mr-2 text-vistara-blue" />
+                      <Hammer size={20} className="mr-2 text-Utkarsh-blue" />
                       <h2 className="text-xl font-semibold">Local Crafts</h2>
                     </div>
                     <ul className="space-y-2">
                       {place.crafts.map((item, index) => (
                         <li key={index} className="flex items-center">
-                          <div className="h-2 w-2 rounded-full bg-vistara-blue mr-2"></div>
+                          <div className="h-2 w-2 rounded-full bg-Utkarsh-blue mr-2"></div>
                           <span>{item}</span>
                         </li>
                       ))}
@@ -200,7 +229,7 @@ const PlaceDetail = () => {
               </div>
 
               {/* User Reviews */}
-              <ReviewSection/>
+              <ReviewSection />
             </div>
 
             {/* Sidebar */}
@@ -225,9 +254,10 @@ const PlaceDetail = () => {
 
               {/* Recommended Products */}
               <div className="bg-card rounded-xl shadow-sm border p-6">
-                <h3 className="text-lg font-semibold mb-4">Local Artisan Products</h3>
+                <h3 className="text-lg font-semibold mb-4">
+                  Local Artisan Products
+                </h3>
                 <div className="space-y-4">
-
                   {/* Channapatna Toys */}
                   <div className="flex items-center gap-3">
                     <img
@@ -236,8 +266,12 @@ const PlaceDetail = () => {
                       className="w-16 h-16 object-cover rounded-md"
                     />
                     <div className="flex-1">
-                      <h4 className="font-medium text-sm">Channapatna Wooden Dolls</h4>
-                      <p className="text-muted-foreground text-xs">GI-tagged, eco-friendly toys</p>
+                      <h4 className="font-medium text-sm">
+                        Channapatna Wooden Dolls
+                      </h4>
+                      <p className="text-muted-foreground text-xs">
+                        GI-tagged, eco-friendly toys
+                      </p>
                     </div>
                     <div className="text-sm font-medium">₹999</div>
                   </div>
@@ -250,8 +284,12 @@ const PlaceDetail = () => {
                       className="w-16 h-16 object-cover rounded-md"
                     />
                     <div className="flex-1">
-                      <h4 className="font-medium text-sm">Ilkal Handloom Saree</h4>
-                      <p className="text-muted-foreground text-xs">Traditional Karnataka weave</p>
+                      <h4 className="font-medium text-sm">
+                        Ilkal Handloom Saree
+                      </h4>
+                      <p className="text-muted-foreground text-xs">
+                        Traditional Karnataka weave
+                      </p>
                     </div>
                     <div className="text-sm font-medium">₹2,500</div>
                   </div>
@@ -264,8 +302,12 @@ const PlaceDetail = () => {
                       className="w-16 h-16 object-cover rounded-md"
                     />
                     <div className="flex-1">
-                      <h4 className="font-medium text-sm">Mysore Sandal Soap</h4>
-                      <p className="text-muted-foreground text-xs">Natural, iconic fragrance</p>
+                      <h4 className="font-medium text-sm">
+                        Mysore Sandal Soap
+                      </h4>
+                      <p className="text-muted-foreground text-xs">
+                        Natural, iconic fragrance
+                      </p>
                     </div>
                     <div className="text-sm font-medium">₹75</div>
                   </div>
@@ -281,9 +323,11 @@ const PlaceDetail = () => {
                 <h3 className="text-lg font-semibold mb-4">Similar Places</h3>
                 <div className="space-y-4">
                   {places
-                    .filter(p => p.id !== place.id && p.category === place.category)
+                    .filter(
+                      (p) => p.id !== place.id && p.category === place.category
+                    )
                     .slice(0, 3)
-                    .map(p => (
+                    .map((p) => (
                       <Link
                         key={p.id}
                         to={`/explore/${p.id}`}
@@ -304,7 +348,7 @@ const PlaceDetail = () => {
                         </div>
                       </Link>
                     ))}
-                  
+
                   <Button variant="outline" asChild className="w-full">
                     <Link to="/explore">Explore More Places</Link>
                   </Button>

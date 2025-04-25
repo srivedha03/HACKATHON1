@@ -1,4 +1,3 @@
-
 import { Heart, Star, MapPin } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -47,9 +46,7 @@ const PlaceCard = ({
             alt={title}
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
-          <Badge
-            className="absolute top-3 left-3 bg-primary/80 hover:bg-primary"
-          >
+          <Badge className="absolute top-3 left-3 bg-primary/80 hover:bg-primary">
             {category}
           </Badge>
           <button
@@ -62,10 +59,7 @@ const PlaceCard = ({
             )}
             aria-label={liked ? "Unlike" : "Like"}
           >
-            <Heart
-              size={16}
-              className={cn(liked ? "fill-current" : "")}
-            />
+            <Heart size={16} className={cn(liked ? "fill-current" : "")} />
           </button>
         </div>
 
@@ -73,7 +67,7 @@ const PlaceCard = ({
           <div className="flex justify-between items-start">
             <h3 className="text-lg font-semibold line-clamp-1">{title}</h3>
             <div className="flex items-center space-x-1 text-sm">
-              <Star size={16} className="fill-vistara-gold text-vistara-gold" />
+              <Star size={16} className="fill-Utkarsh-gold text-Utkarsh-gold" />
               <span>{rating.toFixed(1)}</span>
             </div>
           </div>
@@ -92,9 +86,7 @@ const PlaceCard = ({
               <Heart size={14} className="mr-1" />
               <span>{likeCount} likes</span>
             </div>
-            <span className="font-medium text-foreground">
-              View Details →
-            </span>
+            <span className="font-medium text-foreground">View Details →</span>
           </div>
         </div>
       </div>

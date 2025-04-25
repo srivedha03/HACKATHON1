@@ -9,7 +9,7 @@ const FeaturesSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="heading-2 mb-4">Core Features</h2>
           <p className="subheading">
-            Explore the powerful features that make VISTARA a comprehensive
+            Explore the powerful features that make Utkarsh a comprehensive
             platform for cultural tourism.
           </p>
         </div>
@@ -18,8 +18,8 @@ const FeaturesSection = () => {
           {/* Feature 1 */}
           <div className="feature-card group">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-vistara-maroon/10 flex items-center justify-center group-hover:bg-vistara-maroon/20 transition-colors">
-                <MapPin className="text-vistara-maroon h-6 w-6" />
+              <div className="w-12 h-12 rounded-full bg-Utkarsh-maroon/10 flex items-center justify-center group-hover:bg-Utkarsh-maroon/20 transition-colors">
+                <MapPin className="text-Utkarsh-maroon h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold">Explore Heritage</h3>
             </div>
@@ -35,8 +35,8 @@ const FeaturesSection = () => {
           {/* Feature 2 */}
           <div className="feature-card group">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-vistara-terracotta/10 flex items-center justify-center group-hover:bg-vistara-terracotta/20 transition-colors">
-                <Film className="text-vistara-terracotta h-6 w-6" />
+              <div className="w-12 h-12 rounded-full bg-Utkarsh-terracotta/10 flex items-center justify-center group-hover:bg-Utkarsh-terracotta/20 transition-colors">
+                <Film className="text-Utkarsh-terracotta h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold">StoryShare</h3>
             </div>
@@ -52,8 +52,8 @@ const FeaturesSection = () => {
           {/* Feature 3 */}
           <div className="feature-card group">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-vistara-blue/10 flex items-center justify-center group-hover:bg-vistara-blue/20 transition-colors">
-                <ShoppingBag className="text-vistara-blue h-6 w-6" />
+              <div className="w-12 h-12 rounded-full bg-Utkarsh-blue/10 flex items-center justify-center group-hover:bg-Utkarsh-blue/20 transition-colors">
+                <ShoppingBag className="text-Utkarsh-blue h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold">Shop Local</h3>
             </div>
@@ -69,8 +69,8 @@ const FeaturesSection = () => {
           {/* Feature 4 */}
           <div className="feature-card group">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-vistara-gold/10 flex items-center justify-center group-hover:bg-vistara-gold/20 transition-colors">
-                <Users className="text-vistara-gold h-6 w-6" />
+              <div className="w-12 h-12 rounded-full bg-Utkarsh-gold/10 flex items-center justify-center group-hover:bg-Utkarsh-gold/20 transition-colors">
+                <Users className="text-Utkarsh-gold h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold">Travel Buddy</h3>
             </div>
@@ -86,8 +86,8 @@ const FeaturesSection = () => {
           {/* Feature 5 */}
           <div className="feature-card group">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-vistara-olive/10 flex items-center justify-center group-hover:bg-vistara-olive/20 transition-colors">
-                <Award className="text-vistara-olive h-6 w-6" />
+              <div className="w-12 h-12 rounded-full bg-Utkarsh-olive/10 flex items-center justify-center group-hover:bg-Utkarsh-olive/20 transition-colors">
+                <Award className="text-Utkarsh-olive h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold">Badges & Rewards</h3>
             </div>
@@ -101,12 +101,12 @@ const FeaturesSection = () => {
           </div>
 
           {/* Feature 6 - CTA Card */}
-          <div className="feature-card bg-gradient-to-br from-vistara-maroon to-vistara-terracotta text-white">
+          <div className="feature-card bg-gradient-to-br from-Utkarsh-maroon to-Utkarsh-terracotta text-white">
             <h3 className="text-xl font-semibold mb-4">
               Start Your Cultural Journey
             </h3>
             <p className="mb-6 text-white/90">
-              Begin your authentic cultural tourism experience with VISTARA
+              Begin your authentic cultural tourism experience with Utkarsh
               today.
             </p>
             <Button asChild variant="secondary" className="w-full">

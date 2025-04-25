@@ -24,36 +24,18 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-  };
-
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
-
-  const changeLanguage = (language: (typeof languages)[0]) => {
+  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+  const isActive = (path: string) => location.pathname === path;
+  const changeLanguage = (language: (typeof languages)[0]) =>
     setLanguage(language);
-  };
-
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
   return (
     <header
@@ -69,7 +51,7 @@ const Header = () => {
           <h1 className="font-bold text-2xl tracking-tight text-primary flex items-center gap-2">
             <span className="font-serif flex items-center gap-1">
               <img src="/vistara-logo.svg" alt="logo" className="w-9 h-9" />
-              UTKARSH
+              VISTARA
             </span>
           </h1>
         </Link>
@@ -130,6 +112,7 @@ const Header = () => {
           >
             {translate("badges")}
           </Link>
+
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-medium transition-colors hover:text-primary text-foreground">
               More
@@ -151,6 +134,12 @@ const Header = () => {
                   className="w-full cursor-pointer"
                 >
                   {translate("educationalnetwork")}
+                </Link>
+              </DropdownMenuItem>
+              {/* ✅ Translator Link */}
+              <DropdownMenuItem asChild>
+                <Link to="/more/translator" className="w-full cursor-pointer">
+                  Translator
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -274,7 +263,6 @@ const Header = () => {
             >
               {translate("badges")}
             </Link>
-
             <Link
               to="/knowledge-graph"
               className={cn(
@@ -287,7 +275,6 @@ const Header = () => {
             >
               {translate("culturalknowledge")}
             </Link>
-
             <Link
               to="/cultural-mapping"
               className={cn(
@@ -300,7 +287,6 @@ const Header = () => {
             >
               {translate("interactivemapping")}
             </Link>
-
             <Link
               to="/educational-network"
               className={cn(
@@ -313,51 +299,19 @@ const Header = () => {
             >
               {translate("educationalnetwork")}
             </Link>
-
-            <div className="flex items-center space-x-4 py-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleTheme}
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-              </Button>
-
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    aria-label="Select language"
-                  >
-                    <Globe size={18} />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  {languages.map((language) => (
-                    <DropdownMenuItem
-                      key={language.code}
-                      onClick={() => changeLanguage(language)}
-                      className={cn(
-                        "cursor-pointer",
-                        currentLanguage.code === language.code
-                          ? "bg-accent text-accent-foreground"
-                          : ""
-                      )}
-                    >
-                      {language.name}
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-
-              <Button asChild className="rounded-full w-full">
-                <Link to="/explore" onClick={closeMobileMenu}>
-                  {translate("startexploring")}
-                </Link>
-              </Button>
-            </div>
+            {/* ✅ Translator Mobile Link */}
+            <Link
+              to="/more/translator"
+              className={cn(
+                "py-2 text-sm font-medium transition-colors hover:text-primary",
+                isActive("/more/translator")
+                  ? "text-primary"
+                  : "text-foreground"
+              )}
+              onClick={closeMobileMenu}
+            >
+              Translator
+            </Link>
           </div>
         </div>
       )}

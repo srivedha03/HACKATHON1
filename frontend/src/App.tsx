@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound";
 import KnowledgeGraph from "./pages/KnowledgeGraph";
 import CulturalMapping from "./pages/CulturalMapping";
 import EducationalNetwork from "./pages/EducationalNetwork";
+import Translator from "./pages/Translator"; // ✅ Import Translator page
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -45,6 +46,8 @@ const App = () => (
                 path="/educational-network"
                 element={<EducationalNetwork />}
               />
+              <Route path="/more/translator" element={<Translator />} />{" "}
+              {/* ✅ Added route */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

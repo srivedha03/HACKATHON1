@@ -45,7 +45,7 @@ const Shop = () => {
 
   // Load cart from localStorage on component mount
   useEffect(() => {
-    const savedCart = localStorage.getItem("vistara-cart");
+    const savedCart = localStorage.getItem("Utkarsh-cart");
     if (savedCart) {
       setCartItems(JSON.parse(savedCart));
     }
@@ -53,7 +53,7 @@ const Shop = () => {
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem("vistara-cart", JSON.stringify(cartItems));
+    localStorage.setItem("Utkarsh-cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
   const addToCart = (product: any) => {

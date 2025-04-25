@@ -1,4 +1,3 @@
-
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -14,17 +13,17 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-16">
       {/* Background with subtle pattern */}
-      <div className="absolute inset-0 bg-gradient-to-b from-vistara-cream/10 to-background/0 pattern-bg -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-Utkarsh-cream/10 to-background/0 pattern-bg -z-10"></div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-1/4 right-10 w-64 h-64 bg-vistara-maroon/5 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-1/4 left-10 w-80 h-80 bg-vistara-blue/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute top-1/4 right-10 w-64 h-64 bg-Utkarsh-maroon/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/4 left-10 w-80 h-80 bg-Utkarsh-blue/5 rounded-full blur-3xl -z-10"></div>
 
       <div className="container-custom py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-left">
             <h1 className="font-serif font-bold text-5xl md:text-6xl lg:text-7xl leading-tight">
-              <span className="text-primary">VISTARA</span>
+              <span className="text-primary">Utkarsh</span>
               <br />
               <span className="text-foreground text-xl md:text-2xl lg:text-6xl">
                 Cultural Tourism Platform
@@ -32,7 +31,8 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-xl">
-              Discover Hidden Heritage. Empower Communities. Travel with Purpose.
+              Discover Hidden Heritage. Empower Communities. Travel with
+              Purpose.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
