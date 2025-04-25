@@ -7,7 +7,7 @@
 - **Team Number:** 85
 - **Team Name:** COSMIC
 - **Team Leader:** Kishore S R
-- **Email:** kishoresr01@gmail.com
+- **Email:** srivedha11@gmail.com
 - **Phone:** 9900568584
 - **Team Members:**
   - Harshavardhan M

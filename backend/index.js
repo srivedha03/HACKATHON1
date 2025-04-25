@@ -53,12 +53,54 @@ app.get("/api/stories", async (req, res) => {
   }
 });
 
+// const travelBuddySchema = new mongoose.Schema({
+//   user: {
+//     name: String,
+//     avatar: String,
+//     age: Number,
+//     gender: String,
+//   },
+//   destination: String,
+//   fromDate: Date,
+//   toDate: Date,
+//   interests: [String],
+//   message: String,
+//   createdAt: {
+//     type: Date,
+//     default: Date.now,
+//   },
+// });
+
+// const TravelBuddy = mongoose.model("TravelBuddy", travelBuddySchema);
+
+// // POST a new buddy
+// app.post("/api/buddy", async (req, res) => {
+//   try {
+//     const newBuddy = new TravelBuddy(req.body);
+//     await newBuddy.save();
+//     res.status(201).json(newBuddy);
+//   } catch (err) {
+//     console.error("Error saving buddy:", err);
+//     res.status(500).json({ message: "Failed to save buddy" });
+//   }
+// });
+
+// // GET all buddies
+// app.get("/api/buddy", async (req, res) => {
+//   try {
+//     const buddies = await TravelBuddy.find().sort({ createdAt: -1 });
+//     res.json(buddies);
+//   } catch (err) {
+//     res.status(500).json({ message: "Failed to fetch buddies" });
+//   }
+// });
 const travelBuddySchema = new mongoose.Schema({
   user: {
     name: String,
     avatar: String,
     age: Number,
     gender: String,
+    email: String,
   },
   destination: String,
   fromDate: Date,
@@ -73,7 +115,7 @@ const travelBuddySchema = new mongoose.Schema({
 
 const TravelBuddy = mongoose.model("TravelBuddy", travelBuddySchema);
 
-// POST a new buddy
+// Routes
 app.post("/api/buddy", async (req, res) => {
   try {
     const newBuddy = new TravelBuddy(req.body);
@@ -85,7 +127,6 @@ app.post("/api/buddy", async (req, res) => {
   }
 });
 
-// GET all buddies
 app.get("/api/buddy", async (req, res) => {
   try {
     const buddies = await TravelBuddy.find().sort({ createdAt: -1 });

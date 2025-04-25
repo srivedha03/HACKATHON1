@@ -68,7 +68,7 @@ const KnowledgeGraph = () => {
                   </li>
                 </ul>
                 <a
-                  href="https://Utkarsh-cultural-connection-graph.streamlit.app/"
+                  href="https://connectiongraph.onrender.com"
                   rel="noopener noreferrer"
                 >
                   <Button className="mt-6">Explore the Graph</Button>

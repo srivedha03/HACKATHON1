@@ -15,23 +15,6 @@ const FeaturesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Feature 1 */}
-          <div className="feature-card group">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-Utkarsh-maroon/10 flex items-center justify-center group-hover:bg-Utkarsh-maroon/20 transition-colors">
-                <MapPin className="text-Utkarsh-maroon h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold">Explore Heritage</h3>
-            </div>
-            <p className="text-muted-foreground mb-6">
-              Discover hidden cultural gems with our interactive map and
-              personalized recommendations.
-            </p>
-            <Button asChild variant="outline" className="w-full">
-              <Link to="/explore">Explore Now</Link>
-            </Button>
-          </div>
-
           {/* Feature 2 */}
           <div className="feature-card group">
             <div className="flex items-center gap-4 mb-4">
@@ -80,23 +63,6 @@ const FeaturesSection = () => {
             </p>
             <Button asChild variant="outline" className="w-full">
               <Link to="/connect">Find Buddies</Link>
-            </Button>
-          </div>
-
-          {/* Feature 5 */}
-          <div className="feature-card group">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-Utkarsh-olive/10 flex items-center justify-center group-hover:bg-Utkarsh-olive/20 transition-colors">
-                <Award className="text-Utkarsh-olive h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold">Badges & Rewards</h3>
-            </div>
-            <p className="text-muted-foreground mb-6">
-              Earn badges and rewards for sustainable travel practices and
-              community contributions.
-            </p>
-            <Button asChild variant="outline" className="w-full">
-              <Link to="/badges">View Badges</Link>
             </Button>
           </div>
 

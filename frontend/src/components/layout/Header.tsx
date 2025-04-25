@@ -51,7 +51,7 @@ const Header = () => {
           <h1 className="font-bold text-2xl tracking-tight text-primary flex items-center gap-2">
             <span className="font-serif flex items-center gap-1">
               <img src="/vistara-logo.svg" alt="logo" className="w-9 h-9" />
-              VISTARA
+              UTKARSH
             </span>
           </h1>
         </Link>
@@ -85,15 +85,7 @@ const Header = () => {
           >
             {translate("storyshare")}
           </Link>
-          <Link
-            to="/shop"
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-primary",
-              isActive("/shop") ? "text-primary" : "text-foreground"
-            )}
-          >
-            {translate("shoplocal")}
-          </Link>
+
           <Link
             to="/connect"
             className={cn(
@@ -104,13 +96,13 @@ const Header = () => {
             {translate("travelbuddy")}
           </Link>
           <Link
-            to="/badges"
+            to="/shop"
             className={cn(
               "text-sm font-medium transition-colors hover:text-primary",
-              isActive("/badges") ? "text-primary" : "text-foreground"
+              isActive("/shop") ? "text-primary" : "text-foreground"
             )}
           >
-            {translate("badges")}
+            {translate("shoplocal")}
           </Link>
 
           <DropdownMenu>
@@ -124,17 +116,17 @@ const Header = () => {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/cultural-mapping" className="w-full cursor-pointer">
+                {/* <Link to="/cultural-mapping" className="w-full cursor-pointer">
                   {translate("interactivemapping")}
-                </Link>
+                </Link> */}
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link
+                {/* <Link
                   to="/educational-network"
                   className="w-full cursor-pointer"
                 >
                   {translate("educationalnetwork")}
-                </Link>
+                </Link> */}
               </DropdownMenuItem>
               {/* ✅ Translator Link */}
               <DropdownMenuItem asChild>
@@ -253,16 +245,7 @@ const Header = () => {
             >
               {translate("travelbuddy")}
             </Link>
-            <Link
-              to="/badges"
-              className={cn(
-                "py-2 text-sm font-medium transition-colors hover:text-primary",
-                isActive("/badges") ? "text-primary" : "text-foreground"
-              )}
-              onClick={closeMobileMenu}
-            >
-              {translate("badges")}
-            </Link>
+
             <Link
               to="/knowledge-graph"
               className={cn(

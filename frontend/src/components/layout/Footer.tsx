@@ -107,7 +107,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a
-                href="mailto:kishoresr01@gmail.com"
+                href="mailto:srivedh11@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -154,14 +154,7 @@ const Footer = () => {
                   {translate("footer.findcotravelers")}
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/badges"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {translate("footer.sustainabletourism")}
-                </Link>
-              </li>
+
               <li>
                 <Link
                   to="/knowledge-graph"
@@ -170,77 +163,10 @@ const Footer = () => {
                   {translate("culturalknowledge")}
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/cultural-mapping"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {translate("interactivemapping")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/educational-network"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {translate("educationalnetwork")}
-                </Link>
-              </li>
             </ul>
           </div>
 
           {/* Column 3 */}
-          <div>
-            <h4 className="font-medium text-base mb-4">
-              {translate("footer.resourceshead")}
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="https://bento.me/cosmics"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  target="_blank"
-                >
-                  {translate("footer.aboutus")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {translate("footer.ourmission")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {translate("footer.termsofservice")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {translate("footer.privacypolicy")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:kishoresr01@gmail.com"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {translate("footer.contactus")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4 - Newsletter */}
-          <NewsletterBox translate={translate} />
         </div>
 
         <div className="mt-12 pt-8 border-t text-sm text-muted-foreground flex flex-col md:flex-row justify-between items-center">

@@ -154,6 +154,7 @@ const Explore = () => {
           )}
         </div>
       </main>
+
       <Footer />
     </div>
   );

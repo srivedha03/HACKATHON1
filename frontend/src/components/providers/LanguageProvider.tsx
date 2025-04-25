@@ -321,7 +321,7 @@ const translations: Record<string, Record<string, string>> = {
     "footer.youremail": "Your email",
     "footer.subscribe": "Subscribe",
     "footer.allrightsreserved": "All rights reserved.",
-    "footer.madewith": "Made with 💖 by Team COSMIC",
+    "footer.madewith": "Made by Team Hackthon Winners",
     culturalknowledge: "Cultural Knowledge Graph",
     interactivemapping: "Interactive Cultural Mapping",
     educationalnetwork: "Educational Institution Network",
